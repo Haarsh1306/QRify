@@ -1,0 +1,19 @@
+.nav-bar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 40px;
+    background-color: black;
+    width: 100vw;
+    padding: 0px 40px;
+    position: fixed;
+    top: 1%;
+    border-bottom: 1px grey solid;
+}
+
+.nav-bar h5{
+    text-transform: uppercase;
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+}
