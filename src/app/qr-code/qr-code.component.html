@@ -1,9 +1,9 @@
 
-<div class="qr">
+<div #qrContainer class="qr" id="qrCode">
     <h1>Your QR</h1>
-    <qrcode [qrdata]="url" [width]="300" [errorCorrectionLevel]="'M'"></qrcode>
+    <qrcode (qrCodeURL)="onChangeURL($event)"  [qrdata]="url" [width]="300" [errorCorrectionLevel]="'M'"></qrcode>
     <div class="down">
-        <button>Download</button>
+        <a [href]="qrCodeDownloadLink" download="qrcode">Download</a>
         <button (click)="newQr()">Generate New Code</button>
     </div>
 </div>
