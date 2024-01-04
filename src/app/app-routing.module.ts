@@ -5,7 +5,8 @@ import { QRCodeComponent } from './qr-code/qr-code.component';
 
 const routes: Routes = [
   {path:"", component:LandingPageComponent},
-  {path:"qr-code", component:QRCodeComponent}
+  {path:"qr-code", component:QRCodeComponent},
+  {path:"home", component:LandingPageComponent}
 ];
 
 @NgModule({

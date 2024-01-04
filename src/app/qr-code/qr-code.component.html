@@ -1,6 +1,9 @@
 
 <div class="qr">
-    <h1>QR generated</h1>
-    <qrcode [qrdata]="url" [width]="256" [errorCorrectionLevel]="'M'"></qrcode>
-    
+    <h1>Your QR</h1>
+    <qrcode [qrdata]="url" [width]="300" [errorCorrectionLevel]="'M'"></qrcode>
+    <div class="down">
+        <button>Download</button>
+        <button (click)="newQr()">Generate New Code</button>
+    </div>
 </div>

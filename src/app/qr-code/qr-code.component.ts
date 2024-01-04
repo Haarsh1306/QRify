@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-qr-code',
@@ -7,12 +7,15 @@ import { ActivatedRoute } from '@angular/router';
   styleUrl: './qr-code.component.css'
 })
 export class QRCodeComponent implements OnInit {
-  constructor( private activated:ActivatedRoute){}
+  constructor( private activated:ActivatedRoute, private route:Router){}
   url:string=""
+
+  newQr(){
+    this.route.navigate(["home"],{skipLocationChange:true});
+  }
   ngOnInit(): void {
     this.activated.queryParams.subscribe((response: any) => {
-      this.url = response['url']
-      console.log(this.url)
+      this.url = response['url'];
     });
   }
   }

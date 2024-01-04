@@ -15,7 +15,8 @@ onClick(){
   let data = document.getElementById("userUrl") as HTMLInputElement
   if(data){
     let inputValue = data.value.trim()
-    if(inputValue===""){
+    
+    if(inputValue==="" || inputValue.length===0){
       data.placeholder= "Please enter a value"
     }else {
       this.url = data.value
