@@ -16,8 +16,10 @@ onClick(){
   if(data){
     let inputValue = data.value.trim()
     
-    if(inputValue==="" || inputValue.length===0){
+    if(inputValue===""){
+      
       data.placeholder= "Please enter a value"
+      data.value=""
     }else {
       this.url = data.value
       this.router.navigate(['qr-code'], {skipLocationChange:true, queryParams:{url:this.url}})
